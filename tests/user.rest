@@ -1,0 +1,27 @@
+@base_url = http://localhost:8000
+@token = 16|u9rh5a8TwcGHHPppSqipgBlCCoKdId8fptH4HYXaee432d79
+
+### LOGIN
+POST {{base_url}}/api/login
+Content-Type: application/json
+
+{
+    "email": "prinafsika@mail.com",
+    "password": "admin1234"
+}
+
+### REGISTER
+POST {{base_url}}/api/register
+Content-Type: application/json
+
+{
+    "name": "Prinafsika",
+    "email": "prinafsika@mail.com",
+    "password": "admin1234",
+    "password_confirmation": "admin1234"
+}
+
+### LOGOUT
+POST {{base_url}}/api/logout
+Accept: application/json
+Authorization: Bearer {{token}}

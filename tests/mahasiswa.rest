@@ -1,0 +1,48 @@
+@base_url = http://localhost:8000
+@token = 19|wt9bjQiFPNXdMwZnRRahGAX41BfV1RM5wGWzRXTL8bf3e82b
+
+### POST MAHASISWA
+POST {{base_url}}/api/mahasiswa
+Content-Type: application/json
+Authorization: Bearer {{token}}
+Accept: application/json
+
+{
+    "nama": "Dummy1",
+    "npm": "21081010269",
+    "alamat": "Surabaya",
+    "program_studi": "Informatika"
+}
+
+### GET ALL MAHASISWA
+GET {{base_url}}/api/mahasiswa
+Authorization: Bearer {{token}}
+Accept: application/json
+
+### GET ALL MAHASISWA PER PAGE
+GET {{base_url}}/api/mahasiswa?page=2
+Authorization: Bearer {{token}}
+Accept: application/json
+
+### GET MAHASISWA BY NPM
+GET {{base_url}}/api/mahasiswa/21081010278
+Authorization: Bearer {{token}}
+Accept: application/json
+
+### UPDATE MAHASISWA BY NPM
+PUT {{base_url}}/api/mahasiswa/21081010269
+Content-Type: application/json
+Authorization: Bearer {{token}}
+Accept: application/json
+
+{
+    "nama": "Dhany",
+    "npm": "21081010269",
+    "alamat": "Surabaya",
+    "program_studi": "Informatika"
+}
+
+### DELETE MAHASISWA BY ID
+DELETE  {{base_url}}/api/mahasiswa/52
+Authorization: Bearer {{token}}
+Accept: application/json
